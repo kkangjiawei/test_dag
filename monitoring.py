@@ -5,7 +5,7 @@ from ray.serve.handle import RayServeDeploymentHandle
 from ray.serve.drivers import DAGDriver
 from ray.serve.deployment_graph import InputNode
 from typing import Dict, List
-from a1 import *
+#from a1 import *
 logger = logging.getLogger("ray.serve")
 
 
@@ -38,7 +38,7 @@ class SayHello:
         
         
     def check_price(self, amount: float) -> float:
-       # amount = add_one(amount)
+        amount = add_one(amount)
         return amount
     
 @serve.deployment
