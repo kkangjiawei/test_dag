@@ -24,20 +24,29 @@ class FruitMarket:
             return -1
         else:
             fruit_stand = self.directory[fruit]
-            return await (await fruit_stand.remote(amount))
+            return await (await fruit_stand.check_price.remote(amount))
         
         
 @serve.deployment
 class SayHello:
-    def __call__(self, request: Request) -> str:
-        logger.info("Hello world!")
-        return 111
+    
+    DEFAULT_PRICE = 0.5
+    
+    def __init__(self):
+        self.price = self.DEFAULT_PRICE
+        
+        
+    def check_price(self, amount: float) -> float:
+        return amount
     
 @serve.deployment
 class SayBye:
-    def __call__(self, request: Request) -> str:
-        logger.info("Hello world!")
-        return 222
+    DEFAULT_PRICE = 1
+    def __init__(self):
+        self.price = self.DEFAULT_PRICE
+       # return 222
+    def check_price(self, amount: float) -> float:
+        return amount
 
 async def json_resolver(request: Request) -> List:
     return await request.json()
