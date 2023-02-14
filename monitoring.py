@@ -37,7 +37,7 @@ class SayHello:
 class SayBye:
     async def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
-        return 222"
+        return 222
 
 async def json_resolver(request: Request) -> List:
     return await request.json()
