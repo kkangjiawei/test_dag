@@ -38,7 +38,7 @@ class SayHello:
         
         
     def check_price(self, amount: float) -> float:
-        amount = add_one(amount)
+       # amount = add_one(amount)
         return amount
     
 @serve.deployment
