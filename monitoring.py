@@ -31,13 +31,13 @@ class FruitMarket:
 class SayHello:
     async def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
-        return "hi"
+        return 111
     
 @serve.deployment
 class SayBye:
     async def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
-        return "bye bye"
+        return 222"
 
 async def json_resolver(request: Request) -> List:
     return await request.json()
