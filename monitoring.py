@@ -29,13 +29,13 @@ class FruitMarket:
         
 @serve.deployment
 class SayHello:
-    async def __call__(self, request: Request) -> str:
+    def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
         return 111
     
 @serve.deployment
 class SayBye:
-    async def __call__(self, request: Request) -> str:
+    def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
         return 222
 
