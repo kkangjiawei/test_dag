@@ -24,7 +24,7 @@ class FruitMarket:
             return -1
         else:
             fruit_stand = self.directory[fruit]
-            return await (await fruit_stand.check_price.remote(amount))
+            return await (fruit_stand.check_price.remote(amount))
         
         
 @serve.deployment
