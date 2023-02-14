@@ -4,7 +4,7 @@ from starlette.requests import Request
 from ray.serve.handle import RayServeDeploymentHandle
 from ray.serve.drivers import DAGDriver
 from ray.serve.deployment_graph import InputNode
-
+from typing import Dict, List
 logger = logging.getLogger("ray.serve")
 
 
@@ -38,6 +38,9 @@ class SayBye:
     async def __call__(self, request: Request) -> str:
         logger.info("Hello world!")
         return "bye bye"
+
+async def json_resolver(request: Request) -> List:
+    return await request.json()
 
 with InputNode() as query:
     fruit, amount = query[0], query[1]
