@@ -5,7 +5,7 @@ from ray.serve.handle import RayServeDeploymentHandle
 from ray.serve.drivers import DAGDriver
 from ray.serve.deployment_graph import InputNode
 from typing import Dict, List
-from a import add_one
+from a1 import *
 logger = logging.getLogger("ray.serve")
 
 
