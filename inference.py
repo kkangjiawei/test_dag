@@ -1,6 +1,6 @@
 from ray import serve
 from fastapi import FastAPI
-from predictor import Predictor
+#from predictor import Predictor
 from omegaconf import OmegaConf
 from starlette.requests import Request
 from typing import Dict
