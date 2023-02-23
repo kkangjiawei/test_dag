@@ -8,13 +8,10 @@ import os
 
 app = FastAPI()
 
-
-
-cfg = OmegaConf.load(os.path.join(os.path.dirname(__file__), "config.yaml"))
-
 @serve.deployment(route_prefix="/inference")
 class MyModel:
     def __init__(self) -> None:
+        cfg = OmegaConf.load(os.path.join(os.path.dirname(__file__), "config.yaml"))
         self.predictor = Predictor(cfg)
     
     async def __call__(self, request: Request) -> Dict:
