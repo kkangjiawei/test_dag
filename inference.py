@@ -7,12 +7,12 @@ from typing import Dict
 
 app = FastAPI()
 
-cfg = OmegaConf.load("./config.yaml")
+#cfg = OmegaConf.load("./config.yaml")
 
 @serve.deployment(route_prefix="inference")
 class MyModel:
     def __init__(self) -> None:
-        self.predictor = Predictor(cfg)
+ #       self.predictor = Predictor(cfg)
     
     async def __call__(self, request: Request) -> Dict:
 
