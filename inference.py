@@ -9,7 +9,7 @@ app = FastAPI()
 
 #cfg = OmegaConf.load("./config.yaml")
 
-@serve.deployment(route_prefix="inference")
+@serve.deployment(route_prefix="/inference")
 class MyModel:
    # def __init__(self) -> None:
  #       self.predictor = Predictor(cfg)
