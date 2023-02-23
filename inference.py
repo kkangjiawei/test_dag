@@ -4,10 +4,13 @@ from predictor import Predictor
 from omegaconf import OmegaConf
 from starlette.requests import Request
 from typing import Dict
+import os
 
 app = FastAPI()
 
-cfg = OmegaConf.load("./config.yaml")
+
+
+cfg = OmegaConf.load(os.path.join(os.path.dirname(__file__), "config.yaml"))
 
 @serve.deployment(route_prefix="/inference")
 class MyModel:
