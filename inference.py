@@ -11,7 +11,7 @@ app = FastAPI()
 
 @serve.deployment(route_prefix="inference")
 class MyModel:
-    def __init__(self) -> None:
+   # def __init__(self) -> None:
  #       self.predictor = Predictor(cfg)
     
     async def __call__(self, request: Request) -> Dict:
