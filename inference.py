@@ -15,17 +15,6 @@ class MyModel:
         #self.predictor = Predictor(cfg)
     
     async def __call__(self, request: Request) -> Dict:
-
-#         try:
-#             data = await request.json()
-#         except RuntimeError:
-#             data = "Receive channel not available"
-
-#         instances = data["instances"]
-
-#         results = self.predictor.predict(instances)
-
-#         return {"results": results.tolist()}
         a = os.path.join(os.path.dirname(__file__), cfg.model_path)
         returun  a
 
