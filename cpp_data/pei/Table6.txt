@@ -1,0 +1,7 @@
+C-W-S-N-W-F-C-F-Q-R-R-C-R-R-F     562.12
+C-W-S-N-W-F-C-F-Q-R-R-C-R-R       269.1
+C-W-S-N-W-F-C-F-Q-R-R-C-R         603.98
+C-W-S-N-W-F-C-F-Q-R-R-C           1130.22
+C-W-S-N-W-C-F-Q-R-R-C             454.48
+C-W-S-N-W-F-C-Q-R-R-C             388.7
+C-W-S-Q-W-F-C-F-Q-R-R-C           412.62
